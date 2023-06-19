@@ -83,7 +83,7 @@ function App() {
   const handleChange2 = (e) => {
     setGalaxy2({
       ...galaxy2,
-      [e.target.name]: e.target.value
+      [e.target.name]: parseInt(e.target.value)
     })
   }
 
