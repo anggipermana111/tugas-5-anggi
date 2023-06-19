@@ -83,7 +83,7 @@ function App() {
   const handleChange2 = (e) => {
     setGalaxy2({
       ...galaxy2,
-      [e.target.name]: parseInt(e.target.value)
+      name: e.target.value
     })
   }
 
@@ -114,7 +114,14 @@ function App() {
           <h1>Edit/Hapus Berdasarkan ID</h1>
           <label htmlFor='id'>Id</label>
           <br />
-          <input type="number" id='id' name='id' required value={galaxy2.id} onChange={handleChange2} />
+          <input type="number" id='id' name='id' required value={galaxy2.id} onChange={()=>{
+            (e) => {
+              setGalaxy2({
+                ...galaxy2,
+                id: parseInt(e.target.value)
+              })
+            }
+          }} />
           <br />
           <label htmlFor="name">Name</label>
           <br />
