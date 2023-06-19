@@ -1,0 +1,73 @@
+table,tr,th,td {
+  border: 1px solid black;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th,td {
+  padding: 10px 30px;
+  text-align: center;
+}
+
+tbody>tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+thead>tr {
+  background-color: black;
+  color: white;
+}
+
+main {
+  display: flex;
+  gap: 30px;
+}
+
+form {
+  box-sizing: border-box;
+  min-width: 300px;
+  width: 400px;
+  background-color: lightgray;
+  border-radius: 30px;
+  padding: 10px 30px 30px;
+  height: fit-content;
+  >input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+  }
+  >div {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    >button {
+      width: 40%;
+    }
+  }
+  >button {
+    width: 100%;
+  }
+  & button {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    height: 35px;
+    border: none;
+  }
+}
+header {
+  background-color: blue;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >h1{
+    color: white;
+    text-align: center;
+  }
+}
