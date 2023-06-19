@@ -190,22 +190,12 @@ function App() {
               if (galaxy.id <= 1) {
                 return false;
               }
-              setGalaxy({
-                ...galaxy,
-                id: galaxy.id - 1
-              })
-              const newGalaxies = galaxies.filter((object) => object.id !== galaxy.id - 1)
+              const newGalaxies = galaxies.slice(0,galaxies.length-1)
               setGalaxies(newGalaxies)
             }}>Belakang</button>
           </div>
           <button onClick={(e) => {
             e.preventDefault();
-            setGalaxy(
-              {
-                ...galaxy,
-              id:1
-              }
-            )
             setGalaxies([])
           }}>Semua</button>
         </form>
