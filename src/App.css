@@ -24,6 +24,7 @@ thead>tr {
 main {
   display: flex;
   gap: 30px;
+  justify-content: space-around;
 }
 
 form {
