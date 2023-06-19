@@ -200,6 +200,12 @@ function App() {
           </div>
           <button onClick={(e) => {
             e.preventDefault();
+            setGalaxy(
+              {
+                ...galaxy,
+              id:1
+              }
+            )
             setGalaxies([])
           }}>Semua</button>
         </form>
