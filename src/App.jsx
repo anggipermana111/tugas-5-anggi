@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Galaxy from './components/Galaxy';
 import Header from './components/Header';
-import {AiOutlineZoomIn,AiOutlineZoomOut,AiFillEdit,AiFillDelete} from 'react-icons/ai'
+import { AiOutlineZoomIn, AiOutlineZoomOut, AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
 function App() {
   const [galaxies, setGalaxies] = useState([
@@ -114,13 +114,11 @@ function App() {
           <h1>Edit/Hapus Berdasarkan ID</h1>
           <label htmlFor='id'>Id</label>
           <br />
-          <input type="number" id='id' name='id' required value={galaxy2.id} onChange={()=>{
-            (e) => {
-              setGalaxy2({
-                ...galaxy2,
-                id: parseInt(e.target.value)
-              })
-            }
+          <input type="number" id='id' name='id' required value={galaxy2.id} onChange={(e) => {
+            setGalaxy2({
+              ...galaxy2,
+              id: parseInt(e.target.value)
+            })
           }} />
           <br />
           <label htmlFor="name">Name</label>
@@ -138,7 +136,7 @@ function App() {
                   ])
                 }
               })
-            }}> <AiOutlineZoomIn/> Perbesar</button>
+            }}> <AiOutlineZoomIn /> Perbesar</button>
             <button onClick={(e) => {
               e.preventDefault();
               galaxies.map((galaxy) => {
@@ -149,7 +147,7 @@ function App() {
                   ])
                 }
               })
-            }}> <AiOutlineZoomOut/> Perkecil</button>
+            }}> <AiOutlineZoomOut /> Perkecil</button>
           </div>
           <div>
             <button onClick={(e) => {
@@ -162,14 +160,14 @@ function App() {
                   ])
                 }
               })
-            }}><AiFillEdit/>Edit</button>
+            }}><AiFillEdit />Edit</button>
             <button onClick={(e) => {
               e.preventDefault();
               const newGalaxies = galaxies.filter((galaxy) => galaxy.id !== galaxy2.id)
               setGalaxies([
                 ...newGalaxies
               ])
-            }}><AiFillDelete/>Hapus</button>
+            }}><AiFillDelete />Hapus</button>
           </div>
         </form>
         <form>
